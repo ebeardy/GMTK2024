@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://3tnpts8n21br"]
+[gd_scene load_steps=5 format=3 uid="uid://3tnpts8n21br"]
 
 [ext_resource type="Texture2D" uid="uid://d2c3cn1xhc5xh" path="res://ArtAssets/Character/ForkliftBar.png" id="1_0dkty"]
 [ext_resource type="Script" path="res://forklift_bar.gd" id="1_1btr2"]
@@ -6,12 +6,23 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t76k8"]
 size = Vector2(31, 2)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_1n6n5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0dkty")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="ForkliftBar" type="CharacterBody2D"]
 script = ExtResource("1_1btr2")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_0dkty")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_t76k8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1n6n5")
