@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3702hiu7ng8p"]
+
+[ext_resource type="Texture2D" uid="uid://b3fll1528k23e" path="res://ArtAssets/SmallBoxWithPallet.png" id="1_r1lln"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_80rhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpwby"]
+size = Vector2(36, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fx0ej"]
+size = Vector2(36, 2)
+
+[node name="small_box" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_80rhy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_wpwby")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r1lln")
+
+[node name="pallet" type="CollisionShape2D" parent="."]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_fx0ej")
