@@ -1,7 +1,18 @@
-[gd_scene format=3 uid="uid://bmho3ie3m8j"]
+[gd_scene load_steps=3 format=3 uid="uid://bmho3ie3m8j"]
+
+[ext_resource type="PackedScene" uid="uid://dnh5tufmrwjxy" path="res://player.tscn" id="1_p1g0l"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_07ec2"]
 
 [node name="Warehouse" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="Node2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(459, 111)
+shape = SubResource("WorldBoundaryShape2D_07ec2")
+
+[node name="Player" parent="." instance=ExtResource("1_p1g0l")]
+position = Vector2(452, -47)
