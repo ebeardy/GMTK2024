@@ -8,7 +8,6 @@ var center_y = 0
 var bottom_y = 10
 var direction = 1
 
-@onready var tween = $Tween
 func _ready():
 	center_y = position.y
 		
