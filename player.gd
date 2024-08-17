@@ -4,8 +4,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-var distance_from_center = 78
-@onready var attached_object = $ForkliftBar/AnimatedSprite2D
+var distance_from_center = 50
+@onready var attached_object = $ForkliftBar
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -28,7 +28,7 @@ func _physics_process(delta):
 		if velocity.x > 0:
 			$AnimatedSprite2D.flip_h = false
 			facing_right = true
-			attached_object.position = Vector2(0, 0)
+			attached_object.position = Vector2(distance_from_center, 0)
 		elif velocity.x < 0:
 			$AnimatedSprite2D.flip_h = true
 			facing_right = false
