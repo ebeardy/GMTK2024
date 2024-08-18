@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3702hiu7ng8p"]
+[gd_scene load_steps=6 format=3 uid="uid://b3702hiu7ng8p"]
 
 [ext_resource type="Texture2D" uid="uid://c6vh6iwvy4bqc" path="res://ArtAssets/SmallBoxWithPallet.png" id="1_r1lln"]
-[ext_resource type="Script" path="res://Scenes/AttachmentPoint.gd" id="2_hyipl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_80rhy"]
 
@@ -12,9 +11,10 @@ size = Vector2(36, 35)
 size = Vector2(36, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mwrnl"]
-size = Vector2(20, 4)
+size = Vector2(20, 14)
 
 [node name="small_box" type="RigidBody2D"]
+collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_80rhy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -30,8 +30,7 @@ position = Vector2(0, 32)
 shape = SubResource("RectangleShape2D_fx0ej")
 
 [node name="AttachmentPoint" type="Area2D" parent="."]
-script = ExtResource("2_hyipl")
 
 [node name="AttachmentPoint" type="CollisionShape2D" parent="AttachmentPoint"]
-position = Vector2(0, 15)
+position = Vector2(0, 24)
 shape = SubResource("RectangleShape2D_mwrnl")
