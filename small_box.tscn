@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b3702hiu7ng8p"]
 
-[ext_resource type="Texture2D" uid="uid://b3fll1528k23e" path="res://ArtAssets/SmallBoxWithPallet.png" id="1_r1lln"]
+[ext_resource type="Texture2D" uid="uid://c6vh6iwvy4bqc" path="res://ArtAssets/SmallBoxWithPallet.png" id="1_r1lln"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_80rhy"]
 
