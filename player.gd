@@ -29,8 +29,10 @@ func _physics_process(delta):
 			$AnimatedSprite2D.flip_h = false
 			facing_right = true
 			attached_object.position = Vector2(distance_from_center, $ForkliftBar.position.y)
+			$ForkliftBar/AnimatedSprite2D.flip_h = false
 		elif velocity.x < 0:
 			$AnimatedSprite2D.flip_h = true
+			$ForkliftBar/AnimatedSprite2D.flip_h = true
 			facing_right = false
 			attached_object.position = Vector2(-distance_from_center,$ForkliftBar.position.y)
 	else:

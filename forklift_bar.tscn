@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://3tnpts8n21br"]
 
-[ext_resource type="Texture2D" uid="uid://d2c3cn1xhc5xh" path="res://ArtAssets/Character/ForkliftBar.png" id="1_0dkty"]
+[ext_resource type="Texture2D" uid="uid://b74xvxjylvv72" path="res://ArtAssets/Character/ForkliftBar.png" id="1_0dkty"]
 [ext_resource type="Script" path="res://forklift_bar.gd" id="1_1btr2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t76k8"]
-size = Vector2(31, 2)
+size = Vector2(33, 3)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1n6n5"]
 animations = [{
@@ -23,7 +23,7 @@ collision_mask = 2
 script = ExtResource("1_1btr2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(0.5, 2.5)
 shape = SubResource("RectangleShape2D_t76k8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
